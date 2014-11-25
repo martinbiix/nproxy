@@ -189,7 +189,7 @@ function proxy_resolve_request(request)
         return null;
     }
     //http://localhost:8080/nproxy/http/test/abc.com1
-    var proxyUrlReg = /(https?:\/\/[^\/]+)?\/nproxy\/(https?)\/([^:\/]+)(:\d+)?(\/.*)?$/i;
+    var proxyUrlReg = /(https?:\/\/[^\/]+)?\/npro\/(https?)\/([^:\/]+)(:\d+)?(\/.*)?$/i;
     request.url = request.url.toLowerCase();
     //log(LOG_DBG,"request.url = " + request.url);
     var ret = null;
@@ -259,7 +259,7 @@ function helper_trans_url(url,request)
     log(LOG_DBG,"helper_trans_url,url=" + url + ",refUrl:" + request.orig_url);
     //nproxy/http/200.200.72.50
 	var fullPath = URL.resolve(request.orig_url,url);
-	var ret = (request.proxy_host?request.proxy_host:'') + "/nproxy/" + fullPath.replace(/^(https?):\/\//i,"$1/");
+	var ret = (request.proxy_host?request.proxy_host:'') + "/npro/" + fullPath.replace(/^(https?):\/\//i,"$1/");
     log(LOG_DBG,"helper_trans_url url:" + url + ",ret=" + ret);
     return ret;
 }
