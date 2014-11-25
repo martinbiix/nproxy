@@ -1,9 +1,9 @@
 <html>
 <head>
-<title>nProxy Demo</title>
+<title>PDemo</title>
 </head>
 <body>
-    <h1>nPorxy Demo</h1>
+    <h1>P_Demo</h1>
     <label for="address" ><input id="address" style="width:200px"></label>
     <button onClick="onStart()" style="width:50px;" >Go!</button>
 <script>
@@ -21,7 +21,7 @@
         if(input != '' && (ret = input.match(addRegExp)))
         {
             ret[1] = (ret[1]?ret[1].replace(':','/'):'http/');
-            var proxyUrl = '/nproxy/' + ret[1] + ret[2];
+            var proxyUrl = '/npro/' + ret[1] + ret[2];
             window.location = proxyUrl;
         }
         else
